@@ -10,13 +10,13 @@ Catálogo de nove jogos para aprender páginas, layout, navegação, rotas dinâ
 
 O ZIP inicial não contém o guia nem código de páginas ou componentes. A turma cria o projeto do zero, sem base pronta e sem precisar de Git. Node.js e npm devem estar instalados; a instalação dos pacotes precisa de internet.
 
-O [guia prático](guia-desenvolvimento/guia-catalogo-jogos.html) é o roteiro usado pelo grupo para preparar e apresentar a aula. Ele fica no repositório, separado do ZIP inicial.
+O [guia prático](guia-desenvolvimento/guia-checkpoint.html) é o roteiro usado pelo grupo para preparar e apresentar a aula. Ele fica no repositório, separado do ZIP inicial.
 
 ## Continuar depois da aula
 
 Ao final da aula, o grupo disponibilizará este GitHub completo, incluindo guia, recursos e código de referência. Quem quiser poderá retomar da última etapa concluída e comparar os arquivos.
 
-Use **Code → Download ZIP** para baixar o repositório completo sem Git. Depois de extrair, abra `guia-desenvolvimento/guia-catalogo-jogos.html` no navegador. Esse download completo é diferente do ZIP inicial, que contém somente recursos.
+Use **Code → Download ZIP** para baixar o repositório completo sem Git. Depois de extrair, abra `guia-desenvolvimento/guia-checkpoint.html` no navegador. Esse download completo é diferente do ZIP inicial, que contém somente recursos.
 
 ## Executar a referência completa
 
@@ -38,12 +38,12 @@ Esta aplicação é referência para testar, comparar e continuar depois da aula
 | 0–3 | Ambiente, criação do Next.js, primeira edição e recursos |
 | 4 | Sobre mínima e navegação compartilhada |
 | 5–6 | Catálogo e detalhes de cada jogo |
-| 7 | Botão Curtir / Curtido com estado local |
+| 7 · complemento | Botão Curtir / Curtido com estado local |
 | 8–9 · complementos | Estado compartilhado, balão no menu e página Curtidos |
 | 10 · complemento | Favoritos preservados após recarregar |
 | 11 · complemento | Sobre completa e metadata |
 
-São oito etapas essenciais e quatro complementos. Há um checkpoint para o intervalo entre as duas aulas. Priorize catálogo, detalhes e primeira interação; preserve margem para instalação, internet e diferentes ritmos. Continue depois da aula a partir da última etapa concluída.
+São sete etapas essenciais e cinco complementos, com numeração contínua de 0 a 11. Priorize catálogo e detalhes; preserve margem para instalação, internet e diferentes ritmos. No intervalo entre as aulas, registre onde parou e retome da mesma etapa. Botão e favoritos entram somente se houver tempo e podem ser continuados depois da aula.
 
 ## Conferir com o grupo
 
