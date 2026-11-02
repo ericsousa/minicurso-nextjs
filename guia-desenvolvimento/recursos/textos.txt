@@ -3,6 +3,7 @@ ETAPA 04 — app/sobre/page.tsx
 <main className="container">
   <h1>Sobre o Checkpoint</h1>
   <p>Catálogo criado no minicurso de Next.js.</p>
+  <Link href="/" className="botao-link">Voltar para os jogos</Link>
 </main>
 
 ETAPA 05 — app/page.tsx

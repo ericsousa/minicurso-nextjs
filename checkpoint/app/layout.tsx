@@ -15,12 +15,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body>
         <CurtidosProvider>
           <header className="topo">
-            <Link href="/" className="logo" aria-label="Checkpoint — início">
+            <Link href="/" className="logo">
               Checkpoint<span>.</span>
             </Link>
-            <nav className="menu" aria-label="Menu principal">
-              <Link href="/sobre">Sobre</Link>
+            <nav className="menu">
               <Link href="/">Jogos</Link>
+              <Link href="/sobre">Sobre</Link>
               <LinkCurtidos />
             </nav>
           </header>

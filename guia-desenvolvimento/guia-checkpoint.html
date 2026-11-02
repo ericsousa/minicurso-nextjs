@@ -68,12 +68,12 @@ npm run dev</code></pre><details class="command-help"><summary>Entender os coman
 <h3>Onde entra children?</h3><p>O layout recebe o conteúdo da página em <code>children</code> e escolhe onde exibi-lo. No nosso layout mínimo, <code>&lt;body&gt;{children}&lt;/body&gt;</code> coloca a página dentro do body. Mais adiante, o cabeçalho ficará no layout para aparecer em várias páginas.</p>
 <p><strong>Como explicar em uma frase:</strong> “O arquivo page.tsx escolhe o que aparece naquele endereço; a função Home descreve essa tela em JSX, e o layout fornece a estrutura ao redor.”</p></div>
 <p class="question"><b>Explique com suas palavras</b>Renomear a função Home altera a URL?</p></div></details>
-<div class="task-card"><h3>Execute nesta etapa · siga a ordem</h3><ol><li>Abra checkpoint no VS Code. Altere um texto em app/page.tsx, salve e confira a mudança no navegador.</li><li>Em app/page.tsx, mantenha a função Home e troque o JSX do return pela página simples abaixo. Remova imports que deixaram de ser usados, como Image, se estiverem no arquivo.</li><li>Em app/layout.tsx, aproveite o que o gerador criou: mantenha o import de Metadata, o import do CSS, o bloco metadata e a declaração da função RootLayout com sua tipagem.</li><li>Para tirar apenas as fontes do exemplo, apague o import de Geist/Geist_Mono e as duas constantes geistSans e geistMono. Troque a abertura de html por &lt;html lang=&quot;pt-BR&quot;&gt; e a de body por &lt;body&gt;, removendo os className dessas duas tags. Mantenha {children} e as tags de fechamento.</li></ol><p class="task-hint">Os códigos e caminhos usados nestas tarefas estão expostos abaixo. “Conferir o resultado” mostra o arquivo completo sem exigir que você o redigite.</p></div>
+<div class="task-card"><h3>Execute nesta etapa · siga a ordem</h3><ol><li>Abra checkpoint no VS Code. Altere um texto em app/page.tsx, salve e confira a mudança no navegador.</li><li>Em app/page.tsx, mantenha a função Home e troque o JSX do return pela página inicial do Checkpoint abaixo. Ela começa com título e apresentação; os cards serão acrescentados na etapa 05. Remova imports que deixaram de ser usados, como Image, se estiverem no arquivo.</li><li>Em app/layout.tsx, aproveite o que o gerador criou: mantenha o import de Metadata, o import do CSS, o bloco metadata e a declaração da função RootLayout com sua tipagem.</li><li>Para tirar apenas as fontes do exemplo, apague o import de Geist/Geist_Mono e as duas constantes geistSans e geistMono. Troque a abertura de html por &lt;html lang=&quot;pt-BR&quot;&gt; e a de body por &lt;body&gt;, removendo os className dessas duas tags. Mantenha {children} e as tags de fechamento.</li></ol><p class="task-hint">Os códigos e caminhos usados nestas tarefas estão expostos abaixo. “Conferir o resultado” mostra o arquivo completo sem exigir que você o redigite.</p></div>
 <p class="note">Edite os arquivos existentes; não precisa redigitar a função nem o layout. Se já escreveu a versão mínima anterior com ReactNode, ela também funciona.</p><div class="execution-card" data-action="edit"><div class="execution-heading"><h3>Alterar o arquivo existente · app/page.tsx</h3><p>Faça as alterações descritas na tarefa. Este código mostra como o arquivo fica ao concluir a etapa.</p></div><div class="code-head"><span>app/page.tsx</span><button class="copy" type="button">Copiar</button></div><pre data-file="app/page.tsx"><code>export default function Home() {
   return (
     &lt;main className=&quot;container&quot;&gt;
-      &lt;h1&gt;Meu catálogo de jogos&lt;/h1&gt;
-      &lt;p&gt;Minha primeira página com Next.js.&lt;/p&gt;
+      &lt;h1&gt;Checkpoint&lt;/h1&gt;
+      &lt;p&gt;Explore a coleção e encontre seu próximo jogo.&lt;/p&gt;
     &lt;/main&gt;
   );
 }
@@ -158,24 +158,27 @@ export const jogos: Jogo[] = [
 <h3>Como aparece /sobre?</h3><p>No App Router, a estrutura de pastas participa do endereço. <code>app/page.tsx</code> atende à raiz <code>/</code>. Ao criar <code>app/sobre/page.tsx</code>, adicionamos <code>/sobre</code>. Só criar a pasta sobre não cria uma página: precisamos do arquivo page.tsx e do componente exportado.</p>
 <p>O nome da função pode ser Sobre ou outro nome de componente. Quem define essa URL é a posição do arquivo. Por isso não precisamos cadastrar a rota manualmente em uma lista separada.</p>
 <h3>Por que usar Link e layout?</h3><p><code>Link</code>, importado de next/link, recebe o destino em <code>href</code> e permite navegar entre as rotas da aplicação. Escrevemos o cabeçalho uma vez no layout: ele envolve a página que chega em <code>children</code>.</p>
-<p>Ao navegar, o conteúdo central muda e a estrutura compartilhada continua disponível. Neste momento o menu tem somente Sobre e Jogos. Curtidos depende dos complementos e será acrescentado depois.</p>
+<p>Ao navegar, o conteúdo central muda e a estrutura compartilhada continua disponível. Neste momento o menu tem somente Jogos e Sobre. Curtidos depende dos complementos e será acrescentado depois.</p>
 <p class="question"><b>Explique com suas palavras</b>Por que colocar o cabeçalho no layout em vez de copiá-lo para cada página?</p></div></details>
-<div class="task-card"><h3>Execute nesta etapa · siga a ordem</h3><ol><li>Crie app/sobre/page.tsx e a função Sobre com export default e return, conforme abaixo. Para evitar digitação, copie o main da etapa 04 em recursos/textos.txt para dentro do return. Digite /sobre no navegador para conferir.</li><li>No layout, importe Link de next/link e acrescente o cabeçalho antes de children. Escreva a marca Checkpoint e os links Sobre e Jogos, nesta ordem.</li><li>Navegue entre /sobre e /. Clique na marca para voltar à home. Observe o cabeçalho nas duas páginas.</li><li>Mantenha Sobre pequena por enquanto. Sua versão completa fica para o acabamento final.</li></ol><p class="task-hint">Os códigos e caminhos usados nestas tarefas estão expostos abaixo. “Conferir o resultado” mostra o arquivo completo sem exigir que você o redigite.</p></div>
-<div class="execution-card" data-action="write"><div class="execution-heading"><h3>Escrever o código · app/sobre/page.tsx</h3><p>Crie o arquivo indicado e escreva este código nesta etapa.</p></div><div class="code-head"><span>app/sobre/page.tsx</span><button class="copy" type="button">Copiar</button></div><pre data-file="app/sobre/page.tsx"><code>export default function Sobre() {
+<div class="task-card"><h3>Execute nesta etapa · siga a ordem</h3><ol><li>Crie app/sobre/page.tsx, importe Link de next/link e escreva a função Sobre com export default e return, conforme abaixo. Copie o main da etapa 04 em recursos/textos.txt para dentro do return. Abra /sobre e teste Voltar para os jogos: ele já retorna à home antes de criarmos o menu.</li><li>No layout, importe Link de next/link e acrescente o cabeçalho antes de children. Escreva a marca Checkpoint e os links Jogos e Sobre, nesta ordem.</li><li>Navegue entre /sobre e /. Clique na marca para voltar à home. Observe o cabeçalho nas duas páginas.</li><li>Mantenha Sobre pequena por enquanto. Sua versão completa fica para o acabamento final.</li></ol><p class="task-hint">Os códigos e caminhos usados nestas tarefas estão expostos abaixo. “Conferir o resultado” mostra o arquivo completo sem exigir que você o redigite.</p></div>
+<div class="execution-card" data-action="write"><div class="execution-heading"><h3>Escrever o código · app/sobre/page.tsx</h3><p>Crie o arquivo indicado e escreva este código nesta etapa.</p></div><div class="code-head"><span>app/sobre/page.tsx</span><button class="copy" type="button">Copiar</button></div><pre data-file="app/sobre/page.tsx"><code>import Link from &quot;next/link&quot;;
+
+export default function Sobre() {
   return (
     &lt;main className=&quot;container&quot;&gt;
       &lt;h1&gt;Sobre o Checkpoint&lt;/h1&gt;
       &lt;p&gt;Catálogo criado no minicurso de Next.js.&lt;/p&gt;
+      &lt;Link href=&quot;/&quot; className=&quot;botao-link&quot;&gt;Voltar para os jogos&lt;/Link&gt;
     &lt;/main&gt;
   );
 }
 </code></pre></div><div class="code-head"><span>Executar · acrescente aos imports de app/layout.tsx</span><button class="copy" type="button">Copiar</button></div><pre><code>import Link from &quot;next/link&quot;;</code></pre><div class="code-head"><span>Executar · acrescente dentro de body, antes de {children}</span><button class="copy" type="button">Copiar</button></div><pre><code>&lt;header className=&quot;topo&quot;&gt;
-          &lt;Link href=&quot;/&quot; className=&quot;logo&quot; aria-label=&quot;Checkpoint — início&quot;&gt;
+          &lt;Link href=&quot;/&quot; className=&quot;logo&quot;&gt;
             Checkpoint&lt;span&gt;.&lt;/span&gt;
           &lt;/Link&gt;
-          &lt;nav className=&quot;menu&quot; aria-label=&quot;Menu principal&quot;&gt;
-            &lt;Link href=&quot;/sobre&quot;&gt;Sobre&lt;/Link&gt;
+          &lt;nav className=&quot;menu&quot;&gt;
             &lt;Link href=&quot;/&quot;&gt;Jogos&lt;/Link&gt;
+            &lt;Link href=&quot;/sobre&quot;&gt;Sobre&lt;/Link&gt;
           &lt;/nav&gt;
         &lt;/header&gt;</code></pre><p class="note">Mantenha os imports, metadata e a declaração da função que já existem. Acrescente somente o import de Link e o cabeçalho. O arquivo completo é uma referência para conferir.</p><div class="execution-card" data-action="check"><div class="execution-heading"><h3>Conferir o resultado · app/layout.tsx</h3><p>Não precisa redigitar o arquivo inteiro. Use esta versão para conferir as alterações pedidas acima.</p></div><div class="code-head"><span>app/layout.tsx</span><button class="copy" type="button">Copiar</button></div><pre data-file="app/layout.tsx"><code>import type { Metadata } from &quot;next&quot;;
 import Link from &quot;next/link&quot;;
@@ -191,12 +194,12 @@ export default function RootLayout({ children }: LayoutProps&lt;&quot;/&quot;&gt
     &lt;html lang=&quot;pt-BR&quot;&gt;
       &lt;body&gt;
         &lt;header className=&quot;topo&quot;&gt;
-          &lt;Link href=&quot;/&quot; className=&quot;logo&quot; aria-label=&quot;Checkpoint — início&quot;&gt;
+          &lt;Link href=&quot;/&quot; className=&quot;logo&quot;&gt;
             Checkpoint&lt;span&gt;.&lt;/span&gt;
           &lt;/Link&gt;
-          &lt;nav className=&quot;menu&quot; aria-label=&quot;Menu principal&quot;&gt;
-            &lt;Link href=&quot;/sobre&quot;&gt;Sobre&lt;/Link&gt;
+          &lt;nav className=&quot;menu&quot;&gt;
             &lt;Link href=&quot;/&quot;&gt;Jogos&lt;/Link&gt;
+            &lt;Link href=&quot;/sobre&quot;&gt;Sobre&lt;/Link&gt;
           &lt;/nav&gt;
         &lt;/header&gt;
         {children}
@@ -205,7 +208,7 @@ export default function RootLayout({ children }: LayoutProps&lt;&quot;/&quot;&gt
   );
 }
 </code></pre></div><p class="note">O link Curtidos só será adicionado no complemento de estado compartilhado. Não há uma página pronta escondida nos recursos.</p>
-<fieldset class="checkpoint" data-step="4"><legend>Checkpoint · confira antes de avançar</legend><label><input type="checkbox" data-check="4-0"><span>Página /sobre criada e abrindo.</span></label><label><input type="checkbox" data-check="4-1"><span>Cabeçalho adicionado ao layout.</span></label><label><input type="checkbox" data-check="4-2"><span>Marca e links Sobre e Jogos funcionando.</span></label></fieldset></section><section class="step" id="etapa-5" data-stage="5">
+<fieldset class="checkpoint" data-step="4"><legend>Checkpoint · confira antes de avançar</legend><label><input type="checkbox" data-check="4-0"><span>Página /sobre criada e link Voltar para os jogos funcionando.</span></label><label><input type="checkbox" data-check="4-1"><span>Cabeçalho adicionado ao layout.</span></label><label><input type="checkbox" data-check="4-2"><span>Marca e links Jogos e Sobre funcionando.</span></label></fieldset></section><section class="step" id="etapa-5" data-stage="5">
 <div class="eyebrow">PERCURSO PRINCIPAL · ETAPA 5</div>
 <h2>Exibir o catálogo</h2><p class="goal">Chegar à lista visual dos nove jogos.</p>
 <details class="concept-card"><summary>Entender os conceitos · Dados, map, key e imagens<small>clique para expandir</small></summary><div class="concept-body"><p class="concept-summary">map transforma dados em elementos; key identifica itens. As chaves JSX inserem expressões; crases e ${...} montam o caminho com id. @/ é o alias da raiz. Image apresenta as imagens locais. A home é o catálogo; não há outra lista em /jogos.</p>
@@ -357,7 +360,7 @@ export default async function Detalhes({
 <p>O provedor envolve cabeçalho e conteúdo para alcançar ambos. O layout pode continuar como componente de servidor e passar seu conteúdo em children ao provedor cliente. O número do menu é calculado por <code>ids.length</code>: não precisamos manter outro estado para contar.</p>
 <p>O estado compartilhado sobrevive à navegação interna enquanto o provedor permanece montado. Recarregar ainda o reinicia: persistir a seleção é uma etapa separada.</p>
 <p class="question"><b>Explique com suas palavras</b>Por que três estados separados para botão, menu e lista poderiam sair de sincronia?</p></div></details>
-<div class="task-card"><h3>Execute nesta etapa · siga a ordem</h3><ol><li>Crie components/CurtidosProvider.tsx com a primeira versão em memória abaixo. Guarde uma lista de IDs, como [2, 5], sem duplicatas.</li><li>Leia alternar: se o ID existe, filter o remove; caso contrário, o espalhamento cria uma nova lista com ele.</li><li>Atualize BotaoCurtir para receber jogoId e consumir useCurtidos. Troque seu uso nos detalhes para &lt;BotaoCurtir jogoId={jogo.id} /&gt;. A key deixou de ser necessária para controlar a seleção.</li><li>Crie LinkCurtidos e envolva cabeçalho e children com CurtidosProvider no layout. O menu passa a Sobre, Jogos, Curtidos, com o número em um balão.</li><li>Curta dois jogos nos detalhes navegando por Link. O balão deve mostrar 2; descurtir um deles reduz para 1. Ainda não recarregue esperando persistência.</li></ol><p class="task-hint">Os códigos e caminhos usados nestas tarefas estão expostos abaixo. “Conferir o resultado” mostra o arquivo completo sem exigir que você o redigite.</p></div>
+<div class="task-card"><h3>Execute nesta etapa · siga a ordem</h3><ol><li>Crie components/CurtidosProvider.tsx com a primeira versão em memória abaixo. Guarde uma lista de IDs, como [2, 5], sem duplicatas.</li><li>Leia alternar: se o ID existe, filter o remove; caso contrário, o espalhamento cria uma nova lista com ele.</li><li>Atualize BotaoCurtir para receber jogoId e consumir useCurtidos. Troque seu uso nos detalhes para &lt;BotaoCurtir jogoId={jogo.id} /&gt;. A key deixou de ser necessária para controlar a seleção.</li><li>Crie LinkCurtidos e envolva cabeçalho e children com CurtidosProvider no layout. O menu passa a Jogos, Sobre, Curtidos, com o número em um balão.</li><li>Curta dois jogos nos detalhes navegando por Link. O balão deve mostrar 2; descurtir um deles reduz para 1. Ainda não recarregue esperando persistência.</li></ol><p class="task-hint">Os códigos e caminhos usados nestas tarefas estão expostos abaixo. “Conferir o resultado” mostra o arquivo completo sem exigir que você o redigite.</p></div>
 <div class="execution-card" data-action="write"><div class="execution-heading"><h3>Escrever o código · components/CurtidosProvider.tsx</h3><p>Crie o arquivo indicado e escreva este código nesta etapa.</p></div><div class="code-head"><span>components/CurtidosProvider.tsx</span><button class="copy" type="button">Copiar</button></div><pre data-file="components/CurtidosProvider.tsx"><code>&quot;use client&quot;;
 
 import { createContext, useContext, useState, type ReactNode } from &quot;react&quot;;
@@ -414,7 +417,7 @@ import { useCurtidos } from &quot;@/components/CurtidosProvider&quot;;
 export default function LinkCurtidos() {
   const { ids, carregado } = useCurtidos();
   return (
-    &lt;Link href=&quot;/curtidos&quot; aria-label={carregado ? `Jogos curtidos: ${ids.length}` : &quot;Jogos curtidos&quot;}&gt;
+    &lt;Link href=&quot;/curtidos&quot;&gt;
       Curtidos &lt;span className=&quot;contador&quot; aria-live=&quot;polite&quot; aria-atomic=&quot;true&quot;&gt;{carregado ? ids.length : &quot;–&quot;}&lt;/span&gt;
     &lt;/Link&gt;
   );
@@ -436,12 +439,12 @@ export default function RootLayout({ children }: LayoutProps&lt;&quot;/&quot;&gt
       &lt;body&gt;
         &lt;CurtidosProvider&gt;
           &lt;header className=&quot;topo&quot;&gt;
-            &lt;Link href=&quot;/&quot; className=&quot;logo&quot; aria-label=&quot;Checkpoint — início&quot;&gt;
+            &lt;Link href=&quot;/&quot; className=&quot;logo&quot;&gt;
               Checkpoint&lt;span&gt;.&lt;/span&gt;
             &lt;/Link&gt;
-            &lt;nav className=&quot;menu&quot; aria-label=&quot;Menu principal&quot;&gt;
-              &lt;Link href=&quot;/sobre&quot;&gt;Sobre&lt;/Link&gt;
+            &lt;nav className=&quot;menu&quot;&gt;
               &lt;Link href=&quot;/&quot;&gt;Jogos&lt;/Link&gt;
+              &lt;Link href=&quot;/sobre&quot;&gt;Sobre&lt;/Link&gt;
               &lt;LinkCurtidos /&gt;
             &lt;/nav&gt;
           &lt;/header&gt;
@@ -485,7 +488,7 @@ export default async function Detalhes({
   );
 }
 </code></pre></div><p class="note">Neste checkpoint o link Curtidos pode abrir 404, pois a próxima etapa cria essa página. carregado: true e erro: null preparam a mesma interface que será usada na persistência, ainda sem carregamento externo.</p>
-<fieldset class="checkpoint" data-extra="8"><legend>Checkpoint · confira antes de avançar</legend><label><input type="checkbox" data-check="8-0"><span>Provedor envolvendo cabeçalho e páginas.</span></label><label><input type="checkbox" data-check="8-1"><span>Botão recebendo jogoId e usando o estado compartilhado.</span></label><label><input type="checkbox" data-check="8-2"><span>Menu na ordem Sobre, Jogos, Curtidos.</span></label><label><input type="checkbox" data-check="8-3"><span>Balão atualizado ao curtir e descurtir jogos.</span></label></fieldset></section><section class="step" id="etapa-9" data-stage="9">
+<fieldset class="checkpoint" data-extra="8"><legend>Checkpoint · confira antes de avançar</legend><label><input type="checkbox" data-check="8-0"><span>Provedor envolvendo cabeçalho e páginas.</span></label><label><input type="checkbox" data-check="8-1"><span>Botão recebendo jogoId e usando o estado compartilhado.</span></label><label><input type="checkbox" data-check="8-2"><span>Menu na ordem Jogos, Sobre, Curtidos.</span></label><label><input type="checkbox" data-check="8-3"><span>Balão atualizado ao curtir e descurtir jogos.</span></label></fieldset></section><section class="step" id="etapa-9" data-stage="9">
 <div class="eyebrow">COMPLEMENTO · ETAPA 9</div>
 <h2>Montar a página de curtidos</h2><p class="goal">Transformar os IDs selecionados em uma lista de jogos.</p>
 <details class="concept-card"><summary>Entender os conceitos · Lista derivada, filter e estado vazio<small>clique para expandir</small></summary><div class="concept-body"><p class="concept-summary">filter seleciona objetos e map os apresenta. ids.length conta jogos diferentes, não cliques. Não guardamos a lista filtrada em outro estado: ela é calculada a partir da seleção. &lt;&gt; agrupa elementos sem criar uma tag HTML extra.</p>
@@ -740,12 +743,12 @@ export default function RootLayout({ children }: LayoutProps&lt;&quot;/&quot;&gt
       &lt;body&gt;
         &lt;CurtidosProvider&gt;
           &lt;header className=&quot;topo&quot;&gt;
-            &lt;Link href=&quot;/&quot; className=&quot;logo&quot; aria-label=&quot;Checkpoint — início&quot;&gt;
+            &lt;Link href=&quot;/&quot; className=&quot;logo&quot;&gt;
               Checkpoint&lt;span&gt;.&lt;/span&gt;
             &lt;/Link&gt;
-            &lt;nav className=&quot;menu&quot; aria-label=&quot;Menu principal&quot;&gt;
-              &lt;Link href=&quot;/sobre&quot;&gt;Sobre&lt;/Link&gt;
+            &lt;nav className=&quot;menu&quot;&gt;
               &lt;Link href=&quot;/&quot;&gt;Jogos&lt;/Link&gt;
+              &lt;Link href=&quot;/sobre&quot;&gt;Sobre&lt;/Link&gt;
               &lt;LinkCurtidos /&gt;
             &lt;/nav&gt;
           &lt;/header&gt;
