@@ -1,15 +1,15 @@
-import type { ReactNode } from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import CurtidosProvider from "@/components/CurtidosProvider";
 import LinkCurtidos from "@/components/LinkCurtidos";
 import "./globals.css";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Checkpoint | Catálogo de Jogos",
   description: "Encontre seu próximo jogo em um catálogo criado no minicurso de Next.js.",
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="pt-BR">
       <body>

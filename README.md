@@ -5,10 +5,10 @@ Catálogo de nove jogos para aprender páginas, layout, navegação, rotas dinâ
 ## Material inicial para a turma
 
 1. No início da aula, receba e extraia [materiais-turma.zip](materiais-turma.zip).
-2. Localize a pasta `recursos`, com CSS, imagens e textos/dados.
+2. Localize a pasta `recursos`, com CSS, imagens e textos/dados. Os textos já incluem tags JSX e classes, separados por etapa, para copiar no local indicado.
 3. Acompanhe a explicação do grupo para instalar o Next.js e escrever sua própria aplicação.
 
-O ZIP inicial não contém o guia nem código de páginas ou componentes. A turma cria o projeto do zero, sem base pronta e sem precisar de Git. Node.js e npm devem estar instalados; a instalação dos pacotes precisa de internet.
+O ZIP inicial não contém o guia nem arquivos completos de páginas ou componentes. Fornece blocos de conteúdo com marcação; a turma cria o projeto do zero e escreve funções, imports e lógica, sem precisar de Git. Node.js e npm devem estar instalados; a instalação dos pacotes precisa de internet.
 
 O [guia prático](guia-desenvolvimento/guia-checkpoint.html) é o roteiro usado pelo grupo para preparar e apresentar a aula. Ele fica no repositório, separado do ZIP inicial.
 
