@@ -1,0 +1,16 @@
+.memory/
+.codex/
+.agents/
+.aws/
+.vercel/
+node_modules/
+.next/
+__pycache__/
+*.pyc
+*.tsbuildinfo
+*.log
+.env*
+!.env.example
+.DS_Store
+Thumbs.db
+
